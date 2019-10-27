@@ -21,13 +21,13 @@ $ git clone https://github.com/trco/wordpress-nginx-ssl-docker.git .
 2. Create .env file in root folder and add following variables:
 
 ```
-$MYSQL_ROOT_PASSWORD: example_root_password
-$MYSQL_DATABASE: example_database
-$MYSQL_USER: example_user
-$MYSQL_PASSWORD: example_password
-$VIRTUAL_HOST: example.com
-$LETSENCRYPT_HOST: example.com
-$LETSENCRYPT_EMAIL: example@gmail.com
+MYSQL_ROOT_PASSWORD=example_root_password
+MYSQL_DATABASE=example_database
+MYSQL_USER=example_user
+MYSQL_PASSWORD=example_password
+VIRTUAL_HOST=example.com
+LETSENCRYPT_HOST=example.com
+LETSENCRYPT_EMAIL=example@gmail.com
 ```
 
 3. Run `docker network create nginx-proxy` to create a unique network for nginx-proxy and other Docker containers to communicate through.
