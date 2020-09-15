@@ -57,3 +57,16 @@ Starting app ... done
 
 - You can run multiple dockerized Wordpress websites on single server. Just follow the setup for each website separately.
 - You can rename all the containers inside of both docker-compose.yml files.
+
+## SSL certificate force renewal & check status
+
+```
+$ docker exec -it <letsencrypt container> bash
+
+# force renewal
+$ source /app/letsencrypt_service --source-only
+$ update_certs --force-renew
+
+# check status
+$ ./cert_status
+```
